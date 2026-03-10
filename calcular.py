@@ -1,8 +1,9 @@
-sales = []
-endrecord = 0
-i = 0
 
-def sales_registration (endrecord,i):
+def sales_registration ():
+
+    sales = []
+    endrecord = 0
+    i = 0
 
     while endrecord  == 0:
 
@@ -10,7 +11,7 @@ def sales_registration (endrecord,i):
 
         product = input("Enter product name: ")
         price = float(input("Enter unit price $: "))
-        quantity = float(input("Enter quantity sold: "))
+        quantity = int(input("Enter quantity sold: "))
 
         sale_dicctionary = {
 
@@ -31,19 +32,7 @@ def sales_registration (endrecord,i):
             endrecord = 1
 
     total_sales = sum(sale["product_sale"] for sale in sales)
-    return total_sales
 
-def show_sales(total_sales):
+    return sales, total_sales
 
-    print("\nDAILY SALES SUMMARY")
-
-    for sale in sales:
-
-        print(f"\nProduct: {sale['product']}")
-        print(f"Total quantity sold: {sale['quantity']}")
-
-    print(f"\nTotal collected: $ {total_sales}")
-
-total_sales = sales_registration(endrecord,i)
-show_sales(total_sales)
-
+# total_sales = sales_registration(): no lo pongo aquí, si no en main.py
