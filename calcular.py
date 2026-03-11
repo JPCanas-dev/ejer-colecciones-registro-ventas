@@ -1,44 +1,38 @@
 
-def sales_registration ():
+def sales_registration (sales):
 
-    sales = []
-    end_record = 0
-    i = 0
+    product = input("\nEnter product name: ")
+    price = float(input("Enter unit price $: "))
+    quantity = float(input("Enter quantity sold: "))
 
-    while end_record == 0:
+    sale_dicctionary = {
 
-        print(f"\nProduct # {i + 1}")
+        "product" : product,
+        "price" : price,
+        "quantity" : quantity,
+        "product_sale" : price * quantity
 
-        product = input("Enter product name: ")
-        price = float(input("Enter unit price $: "))
-        quantity = float(input("Enter quantity sold: "))
+    }
 
-        sale_dicctionary = {
+    sales.append(sale_dicctionary)
+    return sales
 
-            "product" : product,
-            "price" : price,
-            "quantity" : quantity,
-            "product_sale" : price * quantity
-
-        }
-
-        sales.append(sale_dicctionary)
+def sales_continue (sales):
         
         continue_record = input("Continue with registration (YES/NO): ").lower()
 
-        if continue_record == "yes":
-            i += 1
-        elif continue_record == "no":
-            end_record = 1
+        while continue_record == "yes":
 
-    # Función reservada sum(): suma acumulativa                
+            if continue_record == "yes":
+                 
+                 sales_registration(sales)
+                 continue_record = input("Continue with registration (YES/NO): ").lower()
 
-    # sale es una variable iterativa como i de for i in range(), va recorriendo
-    # posición por posición la lista sales.
+        # I can only return multiple VALUES this way in Python.
+        return sales
 
-    # Y como la lista almacena diccionarios, sale también es un "diccionario".
+# This is only to try that everything is OK here
 
-    total_sales = sum(sale["product_sale"] for sale in sales)
-
-    # Esta manera de retornar varios VALORES solo lo puedo hacer en Python
-    return sales, total_sales
+# sales = []: I can put this at the begining, just for understand the secuence
+# sales = sales_registration(sales)
+# sales_continue(sales)
