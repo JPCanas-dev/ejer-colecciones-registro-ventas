@@ -1,12 +1,9 @@
 
-from calcular import sales_registration
-from calcular import sales_continue
-
 def show_sales(sales):
 
     print("\nDAILY SALES SUMMARY")
 
-    # Reserved function sum(): cumulative sum
+    # Reserved function sum(): acumulative sum
 
     # sale is an iterative variable like i in for i in range(), it goes through
     # the entire sales list position by position.
@@ -30,7 +27,10 @@ def show_sales(sales):
 
 # I'm not returning anything, because this is where the program ends.
 
-# This is only to try that everything is OK here
+# This is only to try that everything is OK here:
+
+# from calcular import sales_registration
+# from calcular import sales_continue
 
 # sales = []
 # sales = sales_registration(sales)
