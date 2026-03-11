@@ -1,3 +1,4 @@
+
 from calcular import sales_registration
 
 def show_sales(sales, total_sales):
@@ -10,3 +11,5 @@ def show_sales(sales, total_sales):
         print(f"Total quantity sold: {sale['quantity']}")
 
     print(f"\nTotal collected: $ {total_sales}")
+
+# No retorno nada, porque aquí termina el programa

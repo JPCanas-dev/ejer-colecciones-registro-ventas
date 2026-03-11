@@ -1,11 +1,11 @@
 
-def sales_registration ():
+sales = []
+endrecord = 0
+i = 0
 
-    sales = []
-    end_record = 0
-    i = 0
+def sales_registration (endrecord,i):
 
-    while end_record == 0:
+    while endrecord  == 0:
 
         print(f"\nProduct # {i + 1}")
 
@@ -23,22 +23,27 @@ def sales_registration ():
         }
 
         sales.append(sale_dicctionary)
-        
+
         continue_record = input("Continue with registration (YES/NO): ").lower()
 
         if continue_record == "yes":
             i += 1
         elif continue_record == "no":
-            end_record = 1
-
-    # Función reservada sum(): suma acumulativa                
-
-    # sale es una variable iterativa como i de for i in range(), va recorriendo
-    # posición por posición la lista sales.
-
-    # Y como la lista almacena diccionarios, sale también es un "diccionario".
+            endrecord = 1
 
     total_sales = sum(sale["product_sale"] for sale in sales)
+    return total_sales
 
-    # Esta manera de retornar varios VALORES solo lo puedo hacer en Python
-    return sales, total_sales
+def show_sales(total_sales):
+
+    print("\nDAILY SALES SUMMARY")
+
+    for sale in sales:
+
+        print(f"\nProduct: {sale['product']}")
+        print(f"Total quantity sold: {sale['quantity']}")
+
+    print(f"\nTotal collected: $ {total_sales}")
+
+total_sales = sales_registration(endrecord,i)
+show_sales(total_sales)
