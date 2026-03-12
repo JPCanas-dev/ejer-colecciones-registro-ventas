@@ -1,8 +1,10 @@
-# ejer-colecciones-registro-ventas
+# Automation of a store's daily sales records
 
-The program allows you to record sales made during the day using a script, to obtain a clear summary of the products sold, quantities, and the total collected at the end of the day.
+## Description:
 
-The system must allow the following:
+The program allows you to record sales made during the day using a python script, to obtain a clear summary of the products, their sales quantities, and the total collected at the end of the day.
+
+## The system allows the following:
 
     1. Recording multiple sales during program execution.
 
@@ -10,31 +12,43 @@ The system must allow the following:
 
     3. Calculating the total value of each sale.
 
-    4. Upon completion of the registration process, generating a summary that includes:
-        a list of registered products
-        a total quantity sold per product
-        a grand total collected that day
+    4. After completing the registration, generating a summary that includes:
 
-User Functions (What You Can Do) are:
+        • List of registered products
+        • Total quantity sold per product
+        • Total amount collected during the day
 
-    1. Start Sales Registration
+## User Functions (What You Can Do) are:
 
-        Run the script in the terminal and begin registering the day's sales.
+### 1. Start Sales Registration:
 
-        Register a Sold Product
-        Enter the product name.
-        Enter the unit price.
+    Run the script in the terminal and begin registering the day's sales.
 
-    2. Register Multiple Consecutive Sales
+    • Register a Sold Product
+    • Enter the product name.
+    • Enter the unit price.
 
-        The system asks if you want to register another sale.
-        You can continue adding products until you decide to stop.
+### 2. Register Multiple Consecutive Sales:
 
+    • The system asks if you want to register another sale.
+    • You can continue adding products until you decide to stop.
 
-    3. View the end-of-day summary
+### 3. View the end-of-day summary
 
-        Lists registered products.
-        Shows the name of the product and is quantity sold.
-        Shows the grand total collected.
+    • Lists registered products.
+    • Shows the name of the product and is quantity sold.
+    • Total amount collected during the day
 
-PROJECT AUTHOR: JUAN CAÑAS
+## Short explanation of the strategy used
+
+    1. Create a repository on GitHub with a main.py file and clone it locally.
+
+    2. Create two more files in the main branch.
+
+    • One file will have a function for the first record and another for continuing or not with the record.
+
+    • The other will have a function to calculate the total collected and display the message to the user.
+
+    3. Import functions to main.py and upload the necessary changes to GitHub.
+
+## PROJECT AUTHOR: JUAN CAÑAS
