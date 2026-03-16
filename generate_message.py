@@ -9,6 +9,8 @@ def show_sales(sales):
 
         i += 1
         print(f"\nProduct # {i}: {sale['product']}")
+        print(f"Unit price: $ {sale['price']}")
         print(f"Total quantity sold: {sale['quantity']}")
 
     print(f"\nTotal collected: $ {total_sales}")
+    print("\nTHANK YOU FOR USING THIS PROGRAM\n")

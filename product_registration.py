@@ -19,7 +19,6 @@ def sales_continue (sales):
     continue_record = input("Continue with registration (YES/NO): ")
 
     while continue_record in ["y", "Y", "yes", "YES"]:
-    # I had: while continue_record.lower() == "yes":
             
         sales_registration(sales)
         continue_record = input("Continue with registration (YES/NO): ")
